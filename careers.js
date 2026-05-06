@@ -1,4 +1,4 @@
-document.getElementById('careersForm').addEventListener('submit', function(e) {
+document.getElementById('careersForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Fetch form data
@@ -15,12 +15,12 @@ document.getElementById('careersForm').addEventListener('submit', function(e) {
     }
 
     // Prepare mailto link
-    const targetEmail = "ex@gmail.com";
+    const targetEmail = "scroob9417@gmail.com";
     const subject = `Job Application: ${position} - ${firstName} ${lastName}`;
     const bodyText = `Applicant: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nPosition Applied For: ${position}`;
-    
+
     const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
-    
+
     window.location.href = mailtoLink;
     alert("Application valid. Opening your email client to send to HR...");
     this.reset();
