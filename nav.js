@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const navHTML = `
         <div class="nav-container">
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="app.html">App</a>
-                <a href="About.html">About</a>
-                <a href="Careers.html">Careers</a>
+                <a href="about.html">About</a>
+                <a href="careers.html">Careers</a>
             </nav>
             <div class="nav-right">
                 <a href="https://www.facebook.com/PrimeStop/" class="social-icon" target="_blank">f</a>
@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
 
     document.getElementById("nav-placeholder").innerHTML = navHTML;
-    
+
     // Highlight the active link
     let currentPath = window.location.pathname.split("/").pop();
     if (currentPath === "") currentPath = "index.html";
-    
+
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
         link.classList.remove("active");
