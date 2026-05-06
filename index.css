@@ -70,7 +70,27 @@ header { background-color: #1a1a1a; color: white; }
 .specials h3 { font-size: 2rem; margin-top: 30px; }
 .full-width-img { width: 100%; display: block; }
 
-footer { background-color: #222; color: #ccc; text-align: center; padding: 40px 20px; }
-.footer-logo { max-width: 200px; margin-bottom: 20px; }
-.footer-links { margin: 20px 0; }
-.footer-links a { color: white; margin: 0 10px; }
+footer.site-footer { background-color: #2e2e2e; color: #fff; text-align: center; padding: 60px 20px; font-size: 0.95rem; }
+.footer-content { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.footer-logo { max-width: 300px; margin-bottom: 40px; }
+.footer-contact { margin-bottom: 40px; }
+.footer-contact p { margin: 8px 0; color: #eee; }
+.footer-links { margin-bottom: 40px; }
+.footer-links a { color: #fff; margin: 0 10px; text-decoration: underline; font-weight: bold; }
+.footer-social { margin-bottom: 40px; }
+.social-icon-footer { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #3b5998;
+    color: white; 
+    width: 40px; 
+    height: 40px; 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    text-decoration: none; 
+    font-family: serif; 
+}
+.footer-copyright { margin: 5px 0; font-size: 0.85rem; color: #ccc; }
+.footer-credit { margin: 5px 0; font-size: 0.85rem; color: #ccc; }
+.footer-credit a { color: #fff; text-decoration: underline; }
