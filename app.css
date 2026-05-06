@@ -1,0 +1,12 @@
+/* Inherits global styles from index concept, defining specifics here */
+@import url('index.css'); /* Assuming shared header/footer styles */
+
+.app-main { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+.app-main h1 { font-size: 3rem; font-weight: normal; margin-bottom: 40px; }
+.app-content { display: flex; gap: 40px; align-items: center; margin-bottom: 60px; }
+.app-icon { width: 200px; height: 200px; border-radius: 30px; }
+.app-text p { line-height: 1.6; margin-bottom: 20px; font-size: 1.1rem; }
+
+.app-stores { display: flex; justify-content: space-around; margin-top: 40px; text-align: center; }
+.app-stores h3 { font-weight: normal; margin-bottom: 20px; }
+.app-stores img { height: 60px; }

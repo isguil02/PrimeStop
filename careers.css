@@ -1,0 +1,19 @@
+@import url('index.css');
+
+.careers-intro { display: flex; max-width: 1000px; margin: 40px auto; padding: 20px; gap: 40px; align-items: center; }
+.intro-text { flex: 1; }
+.intro-text h2 { font-size: 2.5rem; font-weight: normal; }
+.intro-text p { line-height: 1.6; color: #555; }
+.intro-image { flex: 1; }
+.intro-image img { width: 100%; border-radius: 5px; }
+
+.open-positions { background-color: #fcfade; padding: 60px 20px; text-align: center; }
+.open-positions h2 { font-size: 2.5rem; font-weight: normal; margin-bottom: 40px; }
+.open-positions h3 { font-size: 1.8rem; text-align: left; max-width: 1000px; margin: 0 auto 20px auto; font-weight: normal; }
+.open-positions p, .open-positions ul { text-align: left; max-width: 1000px; margin: 0 auto 20px auto; line-height: 1.6; }
+
+.application-section { max-width: 800px; margin: 60px auto; padding: 40px; background: #fff; border: 1px solid #ddd; text-align: center; }
+.application-section h2 { font-weight: normal; font-size: 2.5rem; margin-bottom: 30px; }
+form input, form select, form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; box-sizing: border-box; font-family: inherit; font-size: 1rem; }
+.submit-btn { background-color: #000; color: #fff; border: none; padding: 15px; width: 200px; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+.submit-btn:hover { background-color: #d12027; }
