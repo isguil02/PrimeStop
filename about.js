@@ -12,11 +12,29 @@ document.getElementById('aboutContactForm').addEventListener('submit', function 
         return;
     }
 
-    // Simulate sending email via mailto
-    const targetEmail = "scroob9417@gmail.com";
-    const mailtoLink = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+    const formData = new URLSearchParams();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('subject', subject);
+    formData.append('message', message);
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
 
-    window.location.href = mailtoLink;
-    alert("Form validated. Redirecting to your email client...");
-    this.reset();
+    fetch("https://script.google.com/macros/s/AKfycbyN9HBLtENQp70c0xxxtgALAhJZ0v5Gu0rfxHsR7jeqaAEhPkPsxAlT0VDfQnTsRwT43A/exec", {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+    }).then(() => {
+        alert("Your message has been sent successfully!");
+        this.reset();
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+    }).catch(error => {
+        alert("There was an error sending your message. Please try again later.");
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+    });
 });
